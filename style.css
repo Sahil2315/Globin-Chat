@@ -264,7 +264,7 @@ body{
     height: calc(100% - 68px);
     width: 350px;
     backdrop-filter: blur(20px);
-    background: linear-gradient(90deg, rgba(39,23,84,0.2) 0%, rgba(86,120,135,0.2) 74%, rgba(108,167,159,0.2) 87%, rgba(150,157,255,0.2) 100%);
+    background: linear-gradient(90deg, rgba(61, 41, 116, 0.2) 0%, rgba(40, 61, 104, 0.2) 74%, rgba(51, 57, 128, 0.2) 100%);
 }
 
 #messager{
@@ -536,7 +536,6 @@ body{
 
 #info2{
     padding: 20px 10px;
-    background: linear-gradient(125deg, rgba(2,0,36,0.4) 0%, rgba(8, 8, 59, 0.4) 35%, rgba(0, 89, 255, 0.4) 100%);
 }
 
 #infodiv{

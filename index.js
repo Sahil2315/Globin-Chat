@@ -58,7 +58,7 @@ app.post('/upload', upload.single('image'), async (req, res) => {
 db.connect((err) => {
   if (err) throw err
   console.log("Connected")
-})
+}) 
 
 let sockettoid = {}
 let idtosocket = {}

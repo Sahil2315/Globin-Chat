@@ -125,6 +125,7 @@ imgupload.onchange = async () => {
         fetch('/upload', {
             method: 'POST',
             body: formData,
+            headers: {'Content-Type': 'multipart/form-data'}
         })
             .then(response => response.json())
             .then(data => {

@@ -38,14 +38,14 @@ const storage = getStorage();
 const upload = multer({ storage: multer.memoryStorage() });
 
 app.post('/upload', upload.single('image'), async (req, res) => {
-  const storageRef = ref(storage, `Images/${req.cookies.id.uid}${req.cookies.id.uname}`);
+  const metadata = {contentType: 'jpeg'}
+  const storageRef = ref(storage, `Images/${req.cookies.id.uid}${req.cookies.id.uname}.jpeg`);
   await sharp(req.file.buffer, {failOnError:false})
   .resize( 200, 200, { fit: 'cover' }) // Use the "cover" argument here
-  .toFormat('jpeg')
+  .jpeg()
   .toBuffer()
   .then(async (sharpBuffer) => {
-    uploadTask = await uploadBytesResumable(storageRef, sharpBuffer)
-    // console.log(uploadTask)
+    uploadTask = await uploadBytesResumable(storageRef, sharpBuffer, metadata)
     getDownloadURL(uploadTask.ref).then((downloadURL) => {
       db.query(`update login set profilePic = '${downloadURL}' where uid = ${req.cookies.id.uid}`, (err, result) => {
         if(err) throw err

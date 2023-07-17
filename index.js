@@ -53,6 +53,9 @@ app.post('/upload', upload.single('image'), async (req, res) => {
       })
     })
   })
+  .catch((error) => {
+    console.log(error)
+  })
 });
 
 db.connect((err) => {

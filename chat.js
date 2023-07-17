@@ -127,15 +127,14 @@ imgupload.onchange = async () => {
             body: formData,
             headers: {'Content-Type': 'multipart/form-data'}
         })
-            .then(response => response.json())
-            .then(data => {
-                selfimg.src = data.url
-                selfimg3.src = data.url
-            })
-            .catch(error => {
-            console.error('File upload failed:', error);
-            // Handle any errors that occur during the upload
-            });
+        .then(response => response.json())
+        .then(data => {
+            selfimg.src = data.url
+            selfimg3.src = data.url
+        })
+        .catch(error => {
+        console.error('File upload failed:', error);
+        });
 }
 
 let aboutfn = (prop) => {

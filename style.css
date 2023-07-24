@@ -509,7 +509,7 @@ body{
 .profileInfo{
     color: rgb(53 160 255);
     font-size: 18px;
-    padding-left: 30px;
+    padding-left: 10px;
 }
 
 #imagediv{
@@ -525,6 +525,7 @@ body{
     height: 140px;
     width: 140px;
     margin-bottom: 25px;
+    margin-left: 30px;
 }
 
 #profilePicture1, .profilePicture{

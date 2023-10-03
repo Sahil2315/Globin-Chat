@@ -7,4 +7,4 @@
 
 
 
-## Second Version with Group Chats - https://github.com/Sahil2315/Globin-Chat-v2
+## Second Version with Group Chats, More Organised Messages and Message - Date & Time - https://github.com/Sahil2315/Globin-Chat-v2
